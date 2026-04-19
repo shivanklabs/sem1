@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: white;
+  color: #232f3a;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+}
+
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0a101d;
+} 
+
+.brand img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand img {
+  width: 70px;          
+  height: auto;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.navlinks a {
+  margin-left: 28px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.navlinks a:hover {
+  text-decoration: underline;
+}
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 100px;
+}
+
+.intro h1 {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #0f182e;
+}
+
+.intro p {
+  font-size: 16px;
+  max-width: 420px;
+  color: #465263;
+  margin-bottom: 30px;
+}
+
+
+.btnrow {
+  display: flex;
+  gap: 16px;
+}
+
+.card {
+  padding: 14px 26px;
+  border-radius: 10px;
+  background-color: #2466e2;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+.profile {
+  text-align: center;
+}
+
+.avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 4px solid white;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info .name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #152241;
+}
+
+.profile-info .roles {
+  font-size: 14px;
+  color: #7689a3;
+}
+
+.skills {
+  margin-bottom: 100px;
+}
+
+.skills h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #131e38;
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+
+.skill-card {
+  background-color: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
+}
+
+
+.skill-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #12203f;
+}
+
+
+.skill-level {
+  font-size: 14px;
+  color: #465263;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 600px) {
+  .skills h2 {
+    text-align: center;
+  }
+
+  .skills-grid {
+    gap: 18px;
+  }
+}
+
+
+.projects h2,
+.contact h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #1a2644;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-bottom: 100px;
+}
+
+.projects .card {
+  background-color: white;
+  color: #1e2935;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+}
+
+.projects .card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.projects .card p {
+  font-size: 14px;
+  color: #475569;
+}
+
+
+.contact p {
+  font-size: 15px;
+  color: #475569;
+  margin-bottom: 80px;
+}
+
+
+.endrow {
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+  padding-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navlinks {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .navlinks.show {
+    position: absolute;
+    top: 70px;
+    right: 24px;
+    background-color: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+}
